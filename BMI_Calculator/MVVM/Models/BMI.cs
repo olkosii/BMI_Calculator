@@ -22,11 +22,11 @@ namespace BMI_Calculator.MVVM.Models
             get
             {
                 string template = "BMI: #";
-                if (Result < 16)
-                    return template.Replace("#", "Need to it");
-                else if (result >= 16 && result < 30)
+                if (Result <= 16)
+                    return template.Replace("#", "Need to eat");
+                else if (Result > 16 && Result <= 30)
                     return template.Replace("#", "Normal");
-                else if (result >= 30 && result < 40)
+                else if (Result > 30 && Result <= 40)
                     return template.Replace("#", "Stop eat");
                 else
                     return template.Replace("#", "Go to the Gym!");
